@@ -49,7 +49,7 @@ def patch_html(file : Path, key = False):
             continue
         link.attrs['href'] += '.html'
 
-    if (len(file.suffixes) and file.suffixes[-1] == '.html'):
+    if len(file.suffixes) and file.suffixes[-1] == '.html':
         newFile = file
     else:
         newFile = Path(str(file) + ".html")
