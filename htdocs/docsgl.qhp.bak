@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>gl.docs</namespace>
+
+    <virtualFolder>htdocs</virtualFolder>
+
+    <customFilter name="OpenGL 3">
+        <filterAttribute>opengl</filterAttribute>
+        <filterAttribute>3</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>opengl</filterAttribute>
+        <filterAttribute>3</filterAttribute>
+        <toc>
+            <section title="docs.GL" ref="index.html">
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="glActiveTexture" ref="gl3/glAccum"/>
+            <keyword name="glAlphaFunc" ref="gl3/glAlphaFunc"/>
+            <keyword name="glAttachShader" ref="gl3/glAttachShader"/>
+        </keywords>
+        <files>
+          <file>gl3/glAccum</file>
+          <file>gl3/glAlphaFunc</file>
+          <file>gl3/glAttachShader</file>
+          <file>index.html</file>
+        </files>
+    </filterSection>
+</QtHelpProject>
