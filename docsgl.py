@@ -35,7 +35,7 @@ section.set('title', 'docs.GL')
 section.set('ref', 'index.html')
 
 
-def patch_html(file : Path) -> Path:
+def patch_html(file : Path, key = False):
     print("Patching file {0}".format(file))
     with open(str(file), mode='r') as source:
         soup = BeautifulSoup(source, 'html.parser')
@@ -57,7 +57,11 @@ def patch_html(file : Path) -> Path:
     with open(str(newFile), mode='w') as destination:
         destination.write(soup.prettify())
 
-    return newFile
+    if key:
+        keywords = [x.text for x in soup.select('.fsfunc')] #css selector class fsfunc
+        return keywords, newFile
+    else:
+        return newFile
 
 
 keywords = et.SubElement(fSection, 'keywords')
@@ -66,11 +70,12 @@ gl_files = [gl_file for gl_file in htdocs_dir.glob('{0}/*'.format(folder))]
 
 for gl_file in gl_files:
     if len(gl_file.suffixes) == 0:
-        gl_file = patch_html(gl_file)
-        keyword = et.SubElement(keywords, 'keyword')
-        keyword.set('name', gl_file.stem)
-        keyword.set('id', 'gl::' + gl_file.stem)
-        keyword.set('ref', str(gl_file.relative_to(htdocs_dir)))
+        keys, gl_file = patch_html(gl_file, True) #extract keys
+        for key in keys:
+            keyword = et.SubElement(keywords, 'keyword')
+            keyword.set('name', key)
+            keyword.set('id', 'gl::' + key)
+            keyword.set('ref', str(gl_file.relative_to(htdocs_dir)))
 
 
 files = et.SubElement(fSection, 'files')
