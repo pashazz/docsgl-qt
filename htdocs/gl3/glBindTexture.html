@@ -48,7 +48,7 @@
    </div>
    <div class="header-container">
     <div class="header-inner">
-     <a href="/.html">
+     <a href="/">
       <h1 class="header-logo">
        docs.
        <span class="thicken">
@@ -3409,23 +3409,23 @@
    </div>
    <div id="khronos">
     <div id="command_versions">
-     <a href="../gl4/glBindTexture.html">
+     <a href="../gl4/glBindTexture">
       OpenGL 4
      </a>
      <br>
-      <a class="current" href="../gl3/glBindTexture.html">
+      <a class="current" href="../gl3/glBindTexture">
        OpenGL 3
       </a>
       <br>
-       <a href="../gl2/glBindTexture.html">
+       <a href="../gl2/glBindTexture">
         OpenGL 2
        </a>
        <br>
-        <a href="../es3/glBindTexture.html">
+        <a href="../es3/glBindTexture">
          OpenGL ES 3
         </a>
         <br>
-         <a href="../es2/glBindTexture.html">
+         <a href="../es2/glBindTexture">
           OpenGL ES 2
          </a>
          <br/>
@@ -3890,60 +3890,60 @@
 
 <span class="codecomment">// Build the texture that will serve as the color attachment <span class="ckeyword">for</span> the framebuffer.</span>
 <span class="ckeyword">GLuint</span> texture_map;
-<a href="../gl3/glGenTextures.html">glGenTextures</a>(1, &amp;texture_map);
-<a href="../gl3/glBindTexture.html">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, texture_map);
+<a href="../gl3/glGenTextures">glGenTextures</a>(1, &amp;texture_map);
+<a href="../gl3/glBindTexture">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, texture_map);
 
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MIN_FILTER</span>, <span class="constant">GL_LINEAR</span>);
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MAG_FILTER</span>, <span class="constant">GL_LINEAR</span>);
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_S</span>, <span class="constant">GL_CLAMP_TO_BORDER</span>);
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_T</span>, <span class="constant">GL_CLAMP_TO_BORDER</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MIN_FILTER</span>, <span class="constant">GL_LINEAR</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MAG_FILTER</span>, <span class="constant">GL_LINEAR</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_S</span>, <span class="constant">GL_CLAMP_TO_BORDER</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_T</span>, <span class="constant">GL_CLAMP_TO_BORDER</span>);
 
-<a href="../gl3/glTexImage2D.html">glTexImage2D</a>(<span class="constant">GL_TEXTURE_2D</span>, 0, <span class="constant">GL_RGBA</span>, fbo_width, fbo_height, 0, <span class="constant">GL_RGBA</span>, <span class="constant">GL_UNSIGNED_BYTE</span>, <span class="ckeyword">NULL</span>);
+<a href="../gl3/glTexImage2D">glTexImage2D</a>(<span class="constant">GL_TEXTURE_2D</span>, 0, <span class="constant">GL_RGBA</span>, fbo_width, fbo_height, 0, <span class="constant">GL_RGBA</span>, <span class="constant">GL_UNSIGNED_BYTE</span>, <span class="ckeyword">NULL</span>);
 
-<a href="../gl3/glBindTexture.html">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, 0);
+<a href="../gl3/glBindTexture">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, 0);
 
 <span class="codecomment">// Build the texture that will serve as the depth attachment <span class="ckeyword">for</span> the framebuffer.</span>
 <span class="ckeyword">GLuint</span> depth_texture;
-<a href="../gl3/glGenTextures.html">glGenTextures</a>(1, &amp;depth_texture);
-<a href="../gl3/glBindTexture.html">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, depth_texture);
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MIN_FILTER</span>, <span class="constant">GL_NEAREST</span>);
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MAG_FILTER</span>, <span class="constant">GL_NEAREST</span>);
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_S</span>, <span class="constant">GL_CLAMP_TO_EDGE</span>);
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_T</span>, <span class="constant">GL_CLAMP_TO_EDGE</span>);
-<a href="../gl3/glTexImage2D.html">glTexImage2D</a>(<span class="constant">GL_TEXTURE_2D</span>, 0, <span class="constant">GL_DEPTH_COMPONENT</span>, fbo_width, fbo_height, 0, <span class="constant">GL_DEPTH_COMPONENT</span>, <span class="constant">GL_UNSIGNED_BYTE</span>, <span class="ckeyword">NULL</span>);
-<a href="../gl3/glBindTexture.html">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, 0);
+<a href="../gl3/glGenTextures">glGenTextures</a>(1, &amp;depth_texture);
+<a href="../gl3/glBindTexture">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, depth_texture);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MIN_FILTER</span>, <span class="constant">GL_NEAREST</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MAG_FILTER</span>, <span class="constant">GL_NEAREST</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_S</span>, <span class="constant">GL_CLAMP_TO_EDGE</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_T</span>, <span class="constant">GL_CLAMP_TO_EDGE</span>);
+<a href="../gl3/glTexImage2D">glTexImage2D</a>(<span class="constant">GL_TEXTURE_2D</span>, 0, <span class="constant">GL_DEPTH_COMPONENT</span>, fbo_width, fbo_height, 0, <span class="constant">GL_DEPTH_COMPONENT</span>, <span class="constant">GL_UNSIGNED_BYTE</span>, <span class="ckeyword">NULL</span>);
+<a href="../gl3/glBindTexture">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, 0);
 
 <span class="codecomment">// Build the framebuffer.</span>
 <span class="ckeyword">GLuint</span> framebuffer;
-<a href="../gl3/glGenFramebuffers.html">glGenFramebuffers</a>(1, &amp;framebuffer);
-<a href="../gl3/glBindFramebuffer.html">glBindFramebuffer</a>(<span class="constant">GL_FRAMEBUFFER</span>, (<span class="ckeyword">GLuint</span>)framebuffer);
-<a href="../gl3/glFramebufferTexture.html">glFramebufferTexture2D</a>(<span class="constant">GL_FRAMEBUFFER</span>, <span class="constant">GL_COLOR_ATTACHMENT0</span>, <span class="constant">GL_TEXTURE_2D</span>, texture_map, 0);
-<a href="../gl3/glFramebufferTexture.html">glFramebufferTexture2D</a>(<span class="constant">GL_FRAMEBUFFER</span>, <span class="constant">GL_DEPTH_ATTACHMENT</span>, <span class="constant">GL_TEXTURE_2D</span>, depth_texture, 0);
+<a href="../gl3/glGenFramebuffers">glGenFramebuffers</a>(1, &amp;framebuffer);
+<a href="../gl3/glBindFramebuffer">glBindFramebuffer</a>(<span class="constant">GL_FRAMEBUFFER</span>, (<span class="ckeyword">GLuint</span>)framebuffer);
+<a href="../gl3/glFramebufferTexture">glFramebufferTexture2D</a>(<span class="constant">GL_FRAMEBUFFER</span>, <span class="constant">GL_COLOR_ATTACHMENT0</span>, <span class="constant">GL_TEXTURE_2D</span>, texture_map, 0);
+<a href="../gl3/glFramebufferTexture">glFramebufferTexture2D</a>(<span class="constant">GL_FRAMEBUFFER</span>, <span class="constant">GL_DEPTH_ATTACHMENT</span>, <span class="constant">GL_TEXTURE_2D</span>, depth_texture, 0);
 
-<span class="ckeyword">GLenum</span> status = <a href="../gl3/glCheckFramebufferStatus.html">glCheckFramebufferStatus</a>(<span class="constant">GL_FRAMEBUFFER</span>);
+<span class="ckeyword">GLenum</span> status = <a href="../gl3/glCheckFramebufferStatus">glCheckFramebufferStatus</a>(<span class="constant">GL_FRAMEBUFFER</span>);
 <span class="ckeyword">if</span> (status != <span class="constant">GL_FRAMEBUFFER_COMPLETE</span>)
     <span class="codecomment">// Error</span>
 
-<a href="../gl3/glBindFramebuffer.html">glBindFramebuffer</a>(<span class="constant">GL_FRAMEBUFFER</span>, 0);</pre>
+<a href="../gl3/glBindFramebuffer">glBindFramebuffer</a>(<span class="constant">GL_FRAMEBUFFER</span>, 0);</pre>
       </div>
       <div class="example">
        Create a texture object with linear mipmaps and edge clamping.
        <pre class="programlisting"><span class="ckeyword">GLuint</span> texture_id;
-<a href="../gl3/glGenTextures.html">glGenTextures</a>(1, &amp;texture_id);
-<a href="../gl3/glBindTexture.html">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, texture_id);
+<a href="../gl3/glGenTextures">glGenTextures</a>(1, &amp;texture_id);
+<a href="../gl3/glBindTexture">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, texture_id);
 
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MAG_FILTER</span>, <span class="constant">GL_LINEAR</span>);
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MIN_FILTER</span>, <span class="constant">GL_LINEAR_MIPMAP_LINEAR</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MAG_FILTER</span>, <span class="constant">GL_LINEAR</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_MIN_FILTER</span>, <span class="constant">GL_LINEAR_MIPMAP_LINEAR</span>);
 
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_S</span>, <span class="constant">GL_CLAMP_TO_EDGE</span>);
-<a href="../gl3/glTexParameter.html">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_T</span>, <span class="constant">GL_CLAMP_TO_EDGE</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_S</span>, <span class="constant">GL_CLAMP_TO_EDGE</span>);
+<a href="../gl3/glTexParameter">glTexParameteri</a>(<span class="constant">GL_TEXTURE_2D</span>, <span class="constant">GL_TEXTURE_WRAP_T</span>, <span class="constant">GL_CLAMP_TO_EDGE</span>);
 
 <span class="codecomment">// texture_data is the source data of your texture, in this <span class="ckeyword">case</span></span>
 <span class="codecomment">// its size is <span class="ckeyword">sizeof</span>(<span class="ckeyword">unsigned</span> <span class="ckeyword">char</span>) * texture_width * texture_height * 4</span>
-<a href="../gl3/glTexImage2D.html">glTexImage2D</a>(<span class="constant">GL_TEXTURE_2D</span>, 0, <span class="constant">GL_RGBA</span>, texture_width, texture_height, 0, <span class="constant">GL_RGBA</span>, <span class="constant">GL_UNSIGNED_BYTE</span>, texture_data);
-<a href="../gl3/glGenerateMipmap.html">glGenerateMipmap</a>(<span class="constant">GL_TEXTURE_2D</span>); <span class="codecomment">// Unavailable in OpenGL 2.1, use gluBuild2DMipmaps() insteads.</span>
+<a href="../gl3/glTexImage2D">glTexImage2D</a>(<span class="constant">GL_TEXTURE_2D</span>, 0, <span class="constant">GL_RGBA</span>, texture_width, texture_height, 0, <span class="constant">GL_RGBA</span>, <span class="constant">GL_UNSIGNED_BYTE</span>, texture_data);
+<a href="../gl3/glGenerateMipmap">glGenerateMipmap</a>(<span class="constant">GL_TEXTURE_2D</span>); <span class="codecomment">// Unavailable in OpenGL 2.1, use gluBuild2DMipmaps() insteads.</span>
 
-<a href="../gl3/glBindTexture.html">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, 0);
+<a href="../gl3/glBindTexture">glBindTexture</a>(<span class="constant">GL_TEXTURE_2D</span>, 0);
 </pre>
       </div>
      </div>
@@ -3952,7 +3952,7 @@
        Tutorials
       </h2>
       <p>
-       <a href="http://www.oldunreal.com/editing/s3tc/ARB_texture_compression.pdf.html">
+       <a href="http://www.oldunreal.com/editing/s3tc/ARB_texture_compression.pdf">
         Sébastien Dominé - Using Texture Compression in OpenGL
        </a>
        <br>
@@ -3960,31 +3960,31 @@
          Songho - OpenGL Pixel Buffer Object (PBO)
         </a>
         <br>
-         <a href="http://open.gl/framebuffers.html">
+         <a href="http://open.gl/framebuffers">
           open.gl - Framebuffers
          </a>
          <br>
-          <a href="http://open.gl/geometry.html">
+          <a href="http://open.gl/geometry">
            open.gl - Geometry Shaders
           </a>
           <br>
-           <a href="http://open.gl/textures.html">
+           <a href="http://open.gl/textures">
             open.gl - Textures Objects and Parameters
            </a>
            <br>
-            <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/.html">
+            <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/">
              opengl-tutorial.org - Tutorial 13 : Normal Mapping
             </a>
             <br>
-             <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-14-render-to-texture/.html">
+             <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-14-render-to-texture/">
               opengl-tutorial.org - Tutorial 14 : Render To Texture
              </a>
              <br>
-              <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-16-shadow-mapping/.html">
+              <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-16-shadow-mapping/">
                opengl-tutorial.org - Tutorial 16 : Shadow mapping
               </a>
               <br>
-               <a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-5-a-textured-cube/.html">
+               <a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-5-a-textured-cube/">
                 opengl-tutorial.org - Tutorial 5 : A Textured Cube
                </a>
                <br/>
@@ -4109,7 +4109,7 @@
        </h2>
        <p>
         Copyright © 1991-2006 Silicon Graphics, Inc. This document is licensed under the SGI Free Software B License. For details, see
-        <a href="http://oss.sgi.com/projects/FreeB/.html" target="_top">
+        <a href="http://oss.sgi.com/projects/FreeB/" target="_top">
          http://oss.sgi.com/projects/FreeB/
         </a>
         .
@@ -4120,11 +4120,11 @@
    </div>
    <div id="improvepage">
     Think you can improve this page?
-    <a href="https://github.com/BSVino/docs.gl/blob/master/gl3/glBindTexture.xhtml.html">
+    <a href="https://github.com/BSVino/docs.gl/blob/master/gl3/glBindTexture.xhtml">
      Edit this page
     </a>
     on
-    <a href="https://github.com/BSVino/docs.gl/.html">
+    <a href="https://github.com/BSVino/docs.gl/">
      GitHub
     </a>
     .
@@ -4132,11 +4132,11 @@
   </div>
   <div id="footer">
    <div id="credits">
-    <a href="http://docs.gl/.html">
+    <a href="http://docs.gl/">
      docs.gl
     </a>
     was written by
-    <a href="http://twitter.com/VinoBS.html">
+    <a href="http://twitter.com/VinoBS">
      Jorge Rodríguez
     </a>
     . Each entry is under individual copyright displayed at the bottom of that entry. All other content is in the public domain.

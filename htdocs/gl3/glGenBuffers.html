@@ -48,7 +48,7 @@
    </div>
    <div class="header-container">
     <div class="header-inner">
-     <a href="/.html">
+     <a href="/">
       <h1 class="header-logo">
        docs.
        <span class="thicken">
@@ -3409,23 +3409,23 @@
    </div>
    <div id="khronos">
     <div id="command_versions">
-     <a href="../gl4/glGenBuffers.html">
+     <a href="../gl4/glGenBuffers">
       OpenGL 4
      </a>
      <br>
-      <a class="current" href="../gl3/glGenBuffers.html">
+      <a class="current" href="../gl3/glGenBuffers">
        OpenGL 3
       </a>
       <br>
-       <a href="../gl2/glGenBuffers.html">
+       <a href="../gl2/glGenBuffers">
         OpenGL 2
        </a>
        <br>
-        <a href="../es3/glGenBuffers.html">
+        <a href="../es3/glGenBuffers">
          OpenGL ES 3
         </a>
         <br>
-         <a href="../es2/glGenBuffers.html">
+         <a href="../es2/glGenBuffers">
           OpenGL ES 2
          </a>
          <br/>
@@ -3634,16 +3634,16 @@
 <span class="codecomment">// data_indices is an array of integer offsets into your vertex data.</span>
 
 <span class="ckeyword">GLuint</span> index_buffer; <span class="codecomment">// Save this <span class="ckeyword">for</span> later rendering</span>
-<a href="../gl3/glGenBuffers.html">glGenBuffers</a>(1, &amp;index_buffer);
-<a href="../gl3/glBindBuffer.html">glBindBuffer</a>(<span class="constant">GL_ELEMENT_ARRAY_BUFFER</span>, index_buffer);
-<a href="../gl3/glBufferData.html">glBufferData</a>(<span class="constant">GL_ELEMENT_ARRAY_BUFFER</span>, data_size_in_bytes, 0, <span class="constant">GL_STATIC_DRAW</span>);
-<a href="../gl3/glBufferSubData.html">glBufferSubData</a>(<span class="constant">GL_ELEMENT_ARRAY_BUFFER</span>, 0, data_size_in_bytes, data_indices);
+<a href="../gl3/glGenBuffers">glGenBuffers</a>(1, &amp;index_buffer);
+<a href="../gl3/glBindBuffer">glBindBuffer</a>(<span class="constant">GL_ELEMENT_ARRAY_BUFFER</span>, index_buffer);
+<a href="../gl3/glBufferData">glBufferData</a>(<span class="constant">GL_ELEMENT_ARRAY_BUFFER</span>, data_size_in_bytes, 0, <span class="constant">GL_STATIC_DRAW</span>);
+<a href="../gl3/glBufferSubData">glBufferSubData</a>(<span class="constant">GL_ELEMENT_ARRAY_BUFFER</span>, 0, data_size_in_bytes, data_indices);
 
 <span class="ckeyword">GLint</span> size = 0;
-<a href="../gl3/glGetBufferParameteriv.html">glGetBufferParameteriv</a>(<span class="constant">GL_ELEMENT_ARRAY_BUFFER</span>, <span class="constant">GL_BUFFER_SIZE</span>, &amp;size);
+<a href="../gl3/glGetBufferParameteriv">glGetBufferParameteriv</a>(<span class="constant">GL_ELEMENT_ARRAY_BUFFER</span>, <span class="constant">GL_BUFFER_SIZE</span>, &amp;size);
 <span class="ckeyword">if</span>(data_size_in_bytes != size)
 {
-    <a href="../gl3/glDeleteBuffers.html">glDeleteBuffers</a>(1, &amp;index_buffer);
+    <a href="../gl3/glDeleteBuffers">glDeleteBuffers</a>(1, &amp;index_buffer);
     <span class="codecomment">// Log the error</span>
     <span class="ckeyword">return</span>;
 }
@@ -3658,16 +3658,16 @@
 <span class="codecomment">// data_vertices is your actual vertex data, probably a huge array of floats</span>
 
 <span class="ckeyword">GLuint</span> vertex_buffer; <span class="codecomment">// Save this <span class="ckeyword">for</span> later rendering</span>
-<a href="../gl3/glGenBuffers.html">glGenBuffers</a>(1, &amp;vertex_buffer);
-<a href="../gl3/glBindBuffer.html">glBindBuffer</a>(<span class="constant">GL_ARRAY_BUFFER</span>, vertex_buffer);
-<a href="../gl3/glBufferData.html">glBufferData</a>(<span class="constant">GL_ARRAY_BUFFER</span>, data_size_in_bytes, 0, <span class="constant">GL_STATIC_DRAW</span>);
-<a href="../gl3/glBufferSubData.html">glBufferSubData</a>(<span class="constant">GL_ARRAY_BUFFER</span>, 0, data_size_in_bytes, data_vertices);
+<a href="../gl3/glGenBuffers">glGenBuffers</a>(1, &amp;vertex_buffer);
+<a href="../gl3/glBindBuffer">glBindBuffer</a>(<span class="constant">GL_ARRAY_BUFFER</span>, vertex_buffer);
+<a href="../gl3/glBufferData">glBufferData</a>(<span class="constant">GL_ARRAY_BUFFER</span>, data_size_in_bytes, 0, <span class="constant">GL_STATIC_DRAW</span>);
+<a href="../gl3/glBufferSubData">glBufferSubData</a>(<span class="constant">GL_ARRAY_BUFFER</span>, 0, data_size_in_bytes, data_vertices);
 
 <span class="ckeyword">GLint</span> size = 0;
-<a href="../gl3/glGetBufferParameteriv.html">glGetBufferParameteriv</a>(<span class="constant">GL_ARRAY_BUFFER</span>, <span class="constant">GL_BUFFER_SIZE</span>, &amp;size);
+<a href="../gl3/glGetBufferParameteriv">glGetBufferParameteriv</a>(<span class="constant">GL_ARRAY_BUFFER</span>, <span class="constant">GL_BUFFER_SIZE</span>, &amp;size);
 <span class="ckeyword">if</span>(data_size_in_bytes != size)
 {
-    <a href="../gl3/glDeleteBuffers.html">glDeleteBuffers</a>(1, &amp;vertex_buffer);
+    <a href="../gl3/glDeleteBuffers">glDeleteBuffers</a>(1, &amp;vertex_buffer);
     <span class="codecomment">// Log the error</span>
     <span class="ckeyword">return</span>;
 }
@@ -3688,35 +3688,35 @@
          Songho - OpenGL Vertex Buffer Object (VBO)
         </a>
         <br>
-         <a href="http://open.gl/drawing.html">
+         <a href="http://open.gl/drawing">
           open.gl - The Graphics Pipeline
          </a>
          <br>
-          <a href="http://open.gl/feedback.html">
+          <a href="http://open.gl/feedback">
            open.gl - Transform Feedback
           </a>
           <br>
-           <a href="http://www.opengl-tutorial.org/intermediate-tutorials/billboards-particles/particles-instancing/.html">
+           <a href="http://www.opengl-tutorial.org/intermediate-tutorials/billboards-particles/particles-instancing/">
             opengl-tutorial.org - Particles / Instancing
            </a>
            <br>
-            <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/.html">
+            <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/">
              opengl-tutorial.org - Tutorial 13 : Normal Mapping
             </a>
             <br>
-             <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-14-render-to-texture/.html">
+             <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-14-render-to-texture/">
               opengl-tutorial.org - Tutorial 14 : Render To Texture
              </a>
              <br>
-              <a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-2-the-first-triangle/.html">
+              <a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-2-the-first-triangle/">
                opengl-tutorial.org - Tutorial 2 : The first triangle
               </a>
               <br>
-               <a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-4-a-colored-cube/.html">
+               <a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-4-a-colored-cube/">
                 opengl-tutorial.org - Tutorial 4 : A Colored Cube
                </a>
                <br>
-                <a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-8-basic-shading/.html">
+                <a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-8-basic-shading/">
                  opengl-tutorial.org - Tutorial 8 : Basic shading
                 </a>
                 <br/>
@@ -3770,7 +3770,7 @@
        </h2>
        <p>
         Copyright © 2005 Addison-Wesley. This material may be distributed subject to the terms and conditions set forth in the Open Publication License, v 1.0, 8 June 1999.
-        <a href="http://opencontent.org/openpub/.html" target="_top">
+        <a href="http://opencontent.org/openpub/" target="_top">
          http://opencontent.org/openpub/
         </a>
         .
@@ -3781,11 +3781,11 @@
    </div>
    <div id="improvepage">
     Think you can improve this page?
-    <a href="https://github.com/BSVino/docs.gl/blob/master/gl3/glGenBuffers.xhtml.html">
+    <a href="https://github.com/BSVino/docs.gl/blob/master/gl3/glGenBuffers.xhtml">
      Edit this page
     </a>
     on
-    <a href="https://github.com/BSVino/docs.gl/.html">
+    <a href="https://github.com/BSVino/docs.gl/">
      GitHub
     </a>
     .
@@ -3793,11 +3793,11 @@
   </div>
   <div id="footer">
    <div id="credits">
-    <a href="http://docs.gl/.html">
+    <a href="http://docs.gl/">
      docs.gl
     </a>
     was written by
-    <a href="http://twitter.com/VinoBS.html">
+    <a href="http://twitter.com/VinoBS">
      Jorge Rodríguez
     </a>
     . Each entry is under individual copyright displayed at the bottom of that entry. All other content is in the public domain.

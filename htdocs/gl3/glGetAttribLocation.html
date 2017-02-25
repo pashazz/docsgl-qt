@@ -48,7 +48,7 @@
    </div>
    <div class="header-container">
     <div class="header-inner">
-     <a href="/.html">
+     <a href="/">
       <h1 class="header-logo">
        docs.
        <span class="thicken">
@@ -3409,23 +3409,23 @@
    </div>
    <div id="khronos">
     <div id="command_versions">
-     <a href="../gl4/glGetAttribLocation.html">
+     <a href="../gl4/glGetAttribLocation">
       OpenGL 4
      </a>
      <br>
-      <a class="current" href="../gl3/glGetAttribLocation.html">
+      <a class="current" href="../gl3/glGetAttribLocation">
        OpenGL 3
       </a>
       <br>
-       <a href="../gl2/glGetAttribLocation.html">
+       <a href="../gl2/glGetAttribLocation">
         OpenGL 2
        </a>
        <br>
-        <a href="../es3/glGetAttribLocation.html">
+        <a href="../es3/glGetAttribLocation">
          OpenGL ES 3
         </a>
         <br>
-         <a href="../es2/glGetAttribLocation.html">
+         <a href="../es2/glGetAttribLocation">
           OpenGL ES 2
          </a>
          <br/>
@@ -3687,23 +3687,23 @@
       </h2>
       <div class="example">
        Retrieve uniform data after the shader has been compiled
-       <pre class="programlisting"><span class="codecomment">// The index returned from these <span class="ckeyword">GLint</span> functions gets passed to <a href="../gl3/glEnableVertexAttribArray.html">glEnableVertexAttribArray</a> during rendering.</span>
-<span class="ckeyword">GLint</span> position_attrib_index = <a href="../gl3/glGetAttribLocation.html">glGetAttribLocation</a>(program, <span class="codestring">"position"</span>); <span class="codecomment">// program is what is returned by <a href="../gl3/glCreateProgram.html">glCreateProgram</a>.</span>
-<span class="ckeyword">GLint</span> texcoord_attrib_index = <a href="../gl3/glGetAttribLocation.html">glGetAttribLocation</a>(program, <span class="codestring">"texcoord"</span>);
-<span class="ckeyword">GLint</span> normal_attrib_index = <a href="../gl3/glGetAttribLocation.html">glGetAttribLocation</a>(program, <span class="codestring">"normal"</span>);
-<span class="ckeyword">GLint</span> color_attrib_index = <a href="../gl3/glGetAttribLocation.html">glGetAttribLocation</a>(program, <span class="codestring">"color"</span>);
+       <pre class="programlisting"><span class="codecomment">// The index returned from these <span class="ckeyword">GLint</span> functions gets passed to <a href="../gl3/glEnableVertexAttribArray">glEnableVertexAttribArray</a> during rendering.</span>
+<span class="ckeyword">GLint</span> position_attrib_index = <a href="../gl3/glGetAttribLocation">glGetAttribLocation</a>(program, <span class="codestring">"position"</span>); <span class="codecomment">// program is what is returned by <a href="../gl3/glCreateProgram">glCreateProgram</a>.</span>
+<span class="ckeyword">GLint</span> texcoord_attrib_index = <a href="../gl3/glGetAttribLocation">glGetAttribLocation</a>(program, <span class="codestring">"texcoord"</span>);
+<span class="ckeyword">GLint</span> normal_attrib_index = <a href="../gl3/glGetAttribLocation">glGetAttribLocation</a>(program, <span class="codestring">"normal"</span>);
+<span class="ckeyword">GLint</span> color_attrib_index = <a href="../gl3/glGetAttribLocation">glGetAttribLocation</a>(program, <span class="codestring">"color"</span>);
 
-<a href="../gl3/glBindFragDataLocation.html">glBindFragDataLocation</a>(program, 0, <span class="codestring">"output_color"</span>); <span class="codecomment">// <span class="codestring">"output_color"</span> is an output value in your vertex shader and an input value in your fragment shader.</span>
+<a href="../gl3/glBindFragDataLocation">glBindFragDataLocation</a>(program, 0, <span class="codestring">"output_color"</span>); <span class="codecomment">// <span class="codestring">"output_color"</span> is an output value in your vertex shader and an input value in your fragment shader.</span>
 
 <span class="ckeyword">GLint</span> num_uniforms;
-<a href="../gl3/glGetProgram.html">glGetProgramiv</a>(program, <span class="constant">GL_ACTIVE_UNIFORMS</span>, &amp;num_uniforms);
+<a href="../gl3/glGetProgram">glGetProgramiv</a>(program, <span class="constant">GL_ACTIVE_UNIFORMS</span>, &amp;num_uniforms);
 <span class="ckeyword">GLchar</span> uniform_name[256];
 <span class="ckeyword">GLsizei</span> length;
 <span class="ckeyword">GLint</span> size;
 <span class="ckeyword">GLenum</span> type;
 <span class="ckeyword">for</span> (<span class="ckeyword">int</span> i = 0; i &lt; num_uniforms; i++)
 {
-    <a href="../gl3/glGetActiveUniform.html">glGetActiveUniform</a>(program, i, <span class="ckeyword">sizeof</span>(uniform_name), &amp;length, &amp;size, &amp;type, uniform_name);
+    <a href="../gl3/glGetActiveUniform">glGetActiveUniform</a>(program, i, <span class="ckeyword">sizeof</span>(uniform_name), &amp;length, &amp;size, &amp;type, uniform_name);
     <span class="codecomment">// ... save this uniform data so it can be used during rendering</span>
 }</pre>
       </div>
@@ -3713,15 +3713,15 @@
        Tutorials
       </h2>
       <p>
-       <a href="http://open.gl/geometry.html">
+       <a href="http://open.gl/geometry">
         open.gl - Geometry Shaders
        </a>
        <br>
-        <a href="http://open.gl/drawing.html">
+        <a href="http://open.gl/drawing">
          open.gl - The Graphics Pipeline
         </a>
         <br>
-         <a href="http://open.gl/feedback.html">
+         <a href="http://open.gl/feedback">
           open.gl - Transform Feedback
          </a>
          <br/>
@@ -3776,7 +3776,7 @@
        </h2>
        <p>
         Copyright © 2003-2005 3Dlabs Inc. Ltd. This material may be distributed subject to the terms and conditions set forth in the Open Publication License, v 1.0, 8 June 1999.
-        <a href="http://opencontent.org/openpub/.html" target="_top">
+        <a href="http://opencontent.org/openpub/" target="_top">
          http://opencontent.org/openpub/
         </a>
         .
@@ -3787,11 +3787,11 @@
    </div>
    <div id="improvepage">
     Think you can improve this page?
-    <a href="https://github.com/BSVino/docs.gl/blob/master/gl3/glGetAttribLocation.xhtml.html">
+    <a href="https://github.com/BSVino/docs.gl/blob/master/gl3/glGetAttribLocation.xhtml">
      Edit this page
     </a>
     on
-    <a href="https://github.com/BSVino/docs.gl/.html">
+    <a href="https://github.com/BSVino/docs.gl/">
      GitHub
     </a>
     .
@@ -3799,11 +3799,11 @@
   </div>
   <div id="footer">
    <div id="credits">
-    <a href="http://docs.gl/.html">
+    <a href="http://docs.gl/">
      docs.gl
     </a>
     was written by
-    <a href="http://twitter.com/VinoBS.html">
+    <a href="http://twitter.com/VinoBS">
      Jorge Rodríguez
     </a>
     . Each entry is under individual copyright displayed at the bottom of that entry. All other content is in the public domain.

@@ -48,7 +48,7 @@
    </div>
    <div class="header-container">
     <div class="header-inner">
-     <a href="/.html">
+     <a href="/">
       <h1 class="header-logo">
        docs.
        <span class="thicken">
@@ -3409,23 +3409,23 @@
    </div>
    <div id="khronos">
     <div id="command_versions">
-     <a href="../gl4/glShaderSource.html">
+     <a href="../gl4/glShaderSource">
       OpenGL 4
      </a>
      <br>
-      <a class="current" href="../gl3/glShaderSource.html">
+      <a class="current" href="../gl3/glShaderSource">
        OpenGL 3
       </a>
       <br>
-       <a href="../gl2/glShaderSource.html">
+       <a href="../gl2/glShaderSource">
         OpenGL 2
        </a>
        <br>
-        <a href="../es3/glShaderSource.html">
+        <a href="../es3/glShaderSource">
          OpenGL ES 3
         </a>
         <br>
-         <a href="../es2/glShaderSource.html">
+         <a href="../es2/glShaderSource">
           OpenGL ES 2
          </a>
          <br/>
@@ -3770,52 +3770,52 @@
       </h2>
       <div class="example">
        Compile a program from a vertex shader and a fragment shader.
-       <pre class="programlisting"><span class="ckeyword">GLuint</span> vshader = <a href="../gl3/glCreateShader.html">glCreateShader</a>(<span class="constant">GL_VERTEX_SHADER</span>);
-<a href="../gl3/glShaderSource.html">glShaderSource</a>(vshader, 1, &amp;vertex_shader_source, <span class="ckeyword">NULL</span>); <span class="codecomment">// vertex_shader_source is a <span class="ckeyword">GLchar</span>* containing glsl shader source code</span>
-<a href="../gl3/glCompileShader.html">glCompileShader</a>(vshader);
+       <pre class="programlisting"><span class="ckeyword">GLuint</span> vshader = <a href="../gl3/glCreateShader">glCreateShader</a>(<span class="constant">GL_VERTEX_SHADER</span>);
+<a href="../gl3/glShaderSource">glShaderSource</a>(vshader, 1, &amp;vertex_shader_source, <span class="ckeyword">NULL</span>); <span class="codecomment">// vertex_shader_source is a <span class="ckeyword">GLchar</span>* containing glsl shader source code</span>
+<a href="../gl3/glCompileShader">glCompileShader</a>(vshader);
 
 <span class="ckeyword">GLint</span> vertex_compiled;
-<a href="../gl3/glGetShader.html">glGetShaderiv</a>(vshader, <span class="constant">GL_COMPILE_STATUS</span>, &amp;vertex_compiled);
+<a href="../gl3/glGetShader">glGetShaderiv</a>(vshader, <span class="constant">GL_COMPILE_STATUS</span>, &amp;vertex_compiled);
 <span class="ckeyword">if</span> (vertex_compiled != <span class="constant">GL_TRUE</span>)
 {
     <span class="ckeyword">GLsizei</span> log_length = 0;
     <span class="ckeyword">GLchar</span> message[1024];
-    <a href="../gl3/glGetShaderInfoLog.html">glGetShaderInfoLog</a>(vshader, 1024, &amp;log_length, message);
+    <a href="../gl3/glGetShaderInfoLog">glGetShaderInfoLog</a>(vshader, 1024, &amp;log_length, message);
     <span class="codecomment">// Write the error to a log</span>
 }
 
-<span class="ckeyword">GLuint</span> fshader = <a href="../gl3/glCreateShader.html">glCreateShader</a>(<span class="constant">GL_FRAGMENT_SHADER</span>);
-<a href="../gl3/glShaderSource.html">glShaderSource</a>(fshader, 1, &amp;fragment_shader_source, <span class="ckeyword">NULL</span>); <span class="codecomment">// fragment_shader_source is a <span class="ckeyword">GLchar</span>* containing glsl shader source code</span>
-<a href="../gl3/glCompileShader.html">glCompileShader</a>(fshader);
+<span class="ckeyword">GLuint</span> fshader = <a href="../gl3/glCreateShader">glCreateShader</a>(<span class="constant">GL_FRAGMENT_SHADER</span>);
+<a href="../gl3/glShaderSource">glShaderSource</a>(fshader, 1, &amp;fragment_shader_source, <span class="ckeyword">NULL</span>); <span class="codecomment">// fragment_shader_source is a <span class="ckeyword">GLchar</span>* containing glsl shader source code</span>
+<a href="../gl3/glCompileShader">glCompileShader</a>(fshader);
 
 <span class="ckeyword">GLint</span> fragment_compiled;
-<a href="../gl3/glGetShader.html">glGetShaderiv</a>(fshader, <span class="constant">GL_COMPILE_STATUS</span>, &amp;fragment_compiled);
+<a href="../gl3/glGetShader">glGetShaderiv</a>(fshader, <span class="constant">GL_COMPILE_STATUS</span>, &amp;fragment_compiled);
 <span class="ckeyword">if</span> (fragment_compiled != <span class="constant">GL_TRUE</span>)
 {
     <span class="ckeyword">GLsizei</span> log_length = 0;
     <span class="ckeyword">GLchar</span> message[1024];
-    <a href="../gl3/glGetShaderInfoLog.html">glGetShaderInfoLog</a>(fshader, 1024, &amp;log_length, message);
+    <a href="../gl3/glGetShaderInfoLog">glGetShaderInfoLog</a>(fshader, 1024, &amp;log_length, message);
     <span class="codecomment">// Write the error to a log</span>
 }
 
-<span class="ckeyword">GLuint</span> program = <a href="../gl3/glCreateProgram.html">glCreateProgram</a>();
+<span class="ckeyword">GLuint</span> program = <a href="../gl3/glCreateProgram">glCreateProgram</a>();
 
-<a href="../gl3/glBindAttribLocation.html">glBindAttribLocation</a>(program, 0, <span class="codestring">"position"</span>); <span class="codecomment">// The index passed into <a href="../gl3/glBindAttribLocation.html">glBindAttribLocation</a> is</span>
-<a href="../gl3/glBindAttribLocation.html">glBindAttribLocation</a>(program, 1, <span class="codestring">"texcoord"</span>); <span class="codecomment">// used by <a href="../gl3/glEnableVertexAttribArray.html">glEnableVertexAttribArray</a>. <span class="codestring">"position"</span></span>
-<a href="../gl3/glBindAttribLocation.html">glBindAttribLocation</a>(program, 2, <span class="codestring">"normal"</span>);   <span class="codecomment">// <span class="codestring">"texcoord"</span> <span class="codestring">"normal"</span> and <span class="codestring">"color"</span> are the names of the</span>
-<a href="../gl3/glBindAttribLocation.html">glBindAttribLocation</a>(program, 3, <span class="codestring">"color"</span>);    <span class="codecomment">// respective inputs in your fragment shader.</span>
+<a href="../gl3/glBindAttribLocation">glBindAttribLocation</a>(program, 0, <span class="codestring">"position"</span>); <span class="codecomment">// The index passed into <a href="../gl3/glBindAttribLocation">glBindAttribLocation</a> is</span>
+<a href="../gl3/glBindAttribLocation">glBindAttribLocation</a>(program, 1, <span class="codestring">"texcoord"</span>); <span class="codecomment">// used by <a href="../gl3/glEnableVertexAttribArray">glEnableVertexAttribArray</a>. <span class="codestring">"position"</span></span>
+<a href="../gl3/glBindAttribLocation">glBindAttribLocation</a>(program, 2, <span class="codestring">"normal"</span>);   <span class="codecomment">// <span class="codestring">"texcoord"</span> <span class="codestring">"normal"</span> and <span class="codestring">"color"</span> are the names of the</span>
+<a href="../gl3/glBindAttribLocation">glBindAttribLocation</a>(program, 3, <span class="codestring">"color"</span>);    <span class="codecomment">// respective inputs in your fragment shader.</span>
 
-<a href="../gl3/glAttachShader.html">glAttachShader</a>(program, vshader);
-<a href="../gl3/glAttachShader.html">glAttachShader</a>(program, fshader);
-<a href="../gl3/glLinkProgram.html">glLinkProgram</a>(program);
+<a href="../gl3/glAttachShader">glAttachShader</a>(program, vshader);
+<a href="../gl3/glAttachShader">glAttachShader</a>(program, fshader);
+<a href="../gl3/glLinkProgram">glLinkProgram</a>(program);
 
 <span class="ckeyword">GLint</span> program_linked;
-<a href="../gl3/glGetProgram.html">glGetProgramiv</a>(program, <span class="constant">GL_LINK_STATUS</span>, &amp;program_linked);
+<a href="../gl3/glGetProgram">glGetProgramiv</a>(program, <span class="constant">GL_LINK_STATUS</span>, &amp;program_linked);
 <span class="ckeyword">if</span> (program_linked != <span class="constant">GL_TRUE</span>)
 {
     <span class="ckeyword">GLsizei</span> log_length = 0;
     <span class="ckeyword">GLchar</span> message[1024];
-    <a href="../gl3/glGetProgramInfoLog.html">glGetProgramInfoLog</a>(program, 1024, &amp;log_length, message);
+    <a href="../gl3/glGetProgramInfoLog">glGetProgramInfoLog</a>(program, 1024, &amp;log_length, message);
     <span class="codecomment">// Write the error to a log</span>
 }</pre>
       </div>
@@ -3825,15 +3825,15 @@
        Tutorials
       </h2>
       <p>
-       <a href="http://open.gl/drawing.html">
+       <a href="http://open.gl/drawing">
         open.gl - The Graphics Pipeline
        </a>
        <br>
-        <a href="http://open.gl/feedback.html">
+        <a href="http://open.gl/feedback">
          open.gl - Transform Feedback
         </a>
         <br>
-         <a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-2-the-first-triangle/.html">
+         <a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-2-the-first-triangle/">
           opengl-tutorial.org - Tutorial 2 : The first triangle
          </a>
          <br/>
@@ -3880,7 +3880,7 @@
        </h2>
        <p>
         Copyright © 2003-2005 3Dlabs Inc. Ltd. This material may be distributed subject to the terms and conditions set forth in the Open Publication License, v 1.0, 8 June 1999.
-        <a class="ulink" href="http://opencontent.org/openpub/.html" target="_top">
+        <a class="ulink" href="http://opencontent.org/openpub/" target="_top">
          http://opencontent.org/openpub/
         </a>
         .
@@ -3891,11 +3891,11 @@
    </div>
    <div id="improvepage">
     Think you can improve this page?
-    <a href="https://github.com/BSVino/docs.gl/blob/master/gl3/glShaderSource.xhtml.html">
+    <a href="https://github.com/BSVino/docs.gl/blob/master/gl3/glShaderSource.xhtml">
      Edit this page
     </a>
     on
-    <a href="https://github.com/BSVino/docs.gl/.html">
+    <a href="https://github.com/BSVino/docs.gl/">
      GitHub
     </a>
     .
@@ -3903,11 +3903,11 @@
   </div>
   <div id="footer">
    <div id="credits">
-    <a href="http://docs.gl/.html">
+    <a href="http://docs.gl/">
      docs.gl
     </a>
     was written by
-    <a href="http://twitter.com/VinoBS.html">
+    <a href="http://twitter.com/VinoBS">
      Jorge Rodríguez
     </a>
     . Each entry is under individual copyright displayed at the bottom of that entry. All other content is in the public domain.
