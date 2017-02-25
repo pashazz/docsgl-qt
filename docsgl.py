@@ -45,7 +45,7 @@ def patch_html(file : Path) -> Path:
             #print(link)
             continue
 
-        if link.attrs['href'].endswith(".html"):
+        if '.' in link.attrs['href'] or link.attrs['href'][-1] == '/':
             continue
         link.attrs['href'] += '.html'
 
